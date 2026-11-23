@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LUNARA — thoughtfully made jewellery for everyday moments.">
+  <title>LUNARA — Modern Heirlooms</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="announcement">Complimentary shipping on orders over €100</div>
+  <header class="site-header">
+    <button class="icon-button menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <a class="logo" href="#" aria-label="LUNARA home">LUNARA<span>✳</span></a>
+    <nav class="main-nav" id="main-nav">
+      <a href="#shop">Shop</a><a href="#story">Our story</a><a href="#journal">Journal</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button search-toggle" aria-label="Search products">⌕</button>
+      <button class="icon-button cart-toggle" aria-label="Open shopping bag">Bag <span class="cart-count">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">JEWELLERY TO KEEP CLOSE</p>
+        <h1>Little things.<br><em>Lasting meaning.</em></h1>
+        <p class="hero-text">Thoughtful pieces made to become part of your everyday story.</p>
+        <a class="button button-dark" href="#shop">Discover the collection <span>↗</span></a>
+      </div>
+      <div class="hero-image" role="img" aria-label="Gold jewellery styled on a warm neutral background">
+        <div class="image-note">THE EVERYDAY<br>COLLECTION — 01</div>
+      </div>
+      <div class="hero-side-note">DESIGNED WITH INTENTION · MADE TO BE WORN</div>
+    </section>
+
+    <section class="trust-strip">
+      <span>✳ Thoughtfully designed</span><span>◇ Made for everyday</span><span>✳ Gift-ready packaging</span>
+    </section>
+
+    <section class="shop-section section-wrap" id="shop">
+      <div class="section-heading">
+        <div><p class="eyebrow">FIND YOUR EVERYDAY PIECE</p><h2>The collection</h2></div>
+        <p class="muted">Modern keepsakes, made to go everywhere with you.</p>
+      </div>
+      <div class="shop-toolbar">
+        <div class="filters" role="group" aria-label="Filter products">
+          <button class="filter-btn active" data-category="all">All pieces</button>
+          <button class="filter-btn" data-category="necklaces">Necklaces</button>
+          <button class="filter-btn" data-category="rings">Rings</button>
+          <button class="filter-btn" data-category="earrings">Earrings</button>
+        </div>
+        <label class="sort-label">Sort by
+          <select id="sort-select" aria-label="Sort products">
+            <option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option>
+          </select>
+        </label>
+      </div>
+      <div class="search-panel" id="search-panel" hidden>
+        <input id="search-input" type="search" placeholder="Search jewellery..." aria-label="Search jewellery">
+        <button id="clear-search" class="text-button">Clear</button>
+      </div>
+      <div class="product-grid" id="product-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="story-section" id="story">
+      <div class="story-image" role="img" aria-label="Close-up of delicate gold jewellery"></div>
+      <div class="story-copy">
+        <p class="eyebrow">A LITTLE MORE PERSONAL</p>
+        <h2>Made for your<br><em>kind of beautiful.</em></h2>
+        <p>We believe the pieces you wear every day should feel like you. LUNARA brings together considered details, timeless shapes and a little bit of shine.</p>
+        <a class="underlined-link" href="#journal">A note from our studio <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="quote-section" id="journal">
+      <p class="eyebrow">THE LUNARA NOTE</p>
+      <blockquote>“The best things aren't saved for special occasions. They're part of what makes an ordinary day feel special.”</blockquote>
+      <span>— A thought from our studio</span>
+    </section>
+
+    <section class="newsletter">
+      <div><p class="eyebrow">LETTERS FROM LUNARA</p><h2>A little shine<br>in your inbox.</h2></div>
+      <form id="newsletter-form" class="newsletter-form">
+        <label for="email">Be first to hear about new pieces and small surprises.</label>
+        <div class="email-field"><input id="email" type="email" placeholder="Your email address" required><button type="submit" aria-label="Subscribe">→</button></div>
+        <p class="form-message" id="newsletter-message" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="logo" href="#">LUNARA<span>✳</span></a>
+    <p>Modern heirlooms for every day.</p>
+    <div class="footer-links"><a href="#shop">Shop</a><a href="#story">Our story</a><a href="mailto:hello@lunara.example">Contact</a></div>
+    <small>© 2026 LUNARA Studio. Portfolio demo website.</small>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping bag" aria-hidden="true">
+    <div class="drawer-header"><h2>Your bag <span class="cart-count">0</span></h2><button class="close-cart icon-button" aria-label="Close bag">×</button></div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-empty" id="cart-empty"><span>♡</span><p>Your bag is waiting for something lovely.</p><button class="button button-dark continue-shopping">Continue shopping</button></div>
+    <div class="cart-footer" id="cart-footer" hidden><div class="subtotal"><span>Subtotal</span><strong id="cart-subtotal">€0.00</strong></div><p>Shipping calculated at checkout.</p><button class="button button-dark checkout-button">Continue to checkout <span>↗</span></button></div>
+  </aside>
+
+  <dialog class="product-dialog" id="product-dialog">
+    <button class="dialog-close icon-button" aria-label="Close product details">×</button>
+    <div id="dialog-content"></div>
+  </dialog>
+  <div class="toast" id="toast" role="status"></div>
+</body>
+</html>
